@@ -1,0 +1,18 @@
+package network;
+
+public enum CommandType {
+    REGISTER,
+    LOGIN,
+
+    INFO,
+    SHOW,
+    ADD,
+    UPDATE,
+    REMOVE_BY_ID,
+    CLEAR,
+    SHUFFLE,
+    REMOVE_GREATER,
+    COUNT_LESS_THAN_BEST_ALBUM,
+    FILTER_LESS_THAN_GENRE,
+    PRINT_FIELD_DESCENDING_ESTABLISHMENT_DATE
+}

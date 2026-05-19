@@ -1,0 +1,2 @@
+removefirst
+execute_script 2.txt

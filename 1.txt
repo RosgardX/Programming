@@ -1,0 +1,14 @@
+add
+BandName
+10
+20
+100
+Cool Band
+ROCK
+AlbumName
+10
+10
+100
+
+execute_script 3.txt
+
