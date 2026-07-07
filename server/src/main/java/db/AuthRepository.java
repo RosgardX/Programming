@@ -20,7 +20,6 @@ public class AuthRepository {
             ps.executeUpdate();
             return true;
         } catch (Exception e) {
-            // логин занят или другая ошибка
             return false;
         }
     }

@@ -5,60 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c37a07d2-6f1b-43a7-aece-675e64e7d4d8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/db/PgPass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ClientMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ClientMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/Add.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/Clear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/CountLessThanBestAlbum.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/CountLessThanBestAlbum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/ExecuteScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/ExecuteScript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/Exit.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/Exit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/FilterLessThanGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/FilterLessThanGenre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/GetEstablishmentDates.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/GetEstablishmentDates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/Help.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/History.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/Info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/RemoveById.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/RemoveById.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/RemoveGreater.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/RemoveGreater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/Show.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/Shuffle.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/Shuffle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/commands/UpdateId.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commands/UpdateId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/managers/ClientSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/managers/ClientSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/managers/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/managers/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/managers/InputManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/managers/InputManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/network/UdpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/network/UdpClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/collection.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/models/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/models/Album.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/models/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/models/Coordinates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/models/MusicBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/models/MusicBand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/models/MusicGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/models/MusicGenre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/network/CommandType.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/network/CommandType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collection.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/network/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/network/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/network/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/network/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/network/Serializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/network/Serializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/network/UserCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/network/UserCredentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/resources/log4j2" beforeDir="false" afterPath="$PROJECT_DIR$/server/resources/log4j2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ServerMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/db/AuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/db/AuthRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/db/DbInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/db/DbInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/db/DbManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/db/DbManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/db/MusicBandRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/db/MusicBandRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/managers/AuthManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/managers/AuthManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/managers/CollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/managers/CollectionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/managers/DateAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/managers/DateAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/managers/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/managers/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/managers/DateAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/managers/FileManager.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/network/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/network/RequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/network/UdpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/network/UdpServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +33,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -118,10 +77,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="ServerMain" type="Application" factoryName="Application" nameIsGenerated="true">
+      <envs>
+        <env name="PGHOST" value="pg" />
+        <env name="PGDATABASE" value="studs" />
+        <env name="PGUSER" value="s465657" />
+        <env name="PGPASSWORD" value="HHMh/4509" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="ServerMain" />
       <module name="server" />
-      <option name="PROGRAM_PARAMETERS" value="C:\Users\Dmavk\IdeaProjects\ProgrammingLab6\collection.json" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,7 +112,11 @@
       <workItem from="1778539198349" duration="3260000" />
       <workItem from="1778586239859" duration="5226000" />
       <workItem from="1779105832388" duration="3279000" />
-      <workItem from="1779186883045" duration="9334000" />
+      <workItem from="1779186883045" duration="15025000" />
+      <workItem from="1779284341556" duration="1155000" />
+      <workItem from="1779287909708" duration="1165000" />
+      <workItem from="1779884442382" duration="31000" />
+      <workItem from="1779891172485" duration="40000" />
     </task>
     <servers />
   </component>

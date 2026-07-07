@@ -92,15 +92,11 @@ public class CollectionManager {
         }
     }
 
-    // ===== модификации: сначала БД, потом память (по ТЗ) =====
-
     public boolean add(MusicBand incoming, String ownerLogin) throws Exception {
         if (incoming == null) throw new NullPointerException("Element cannot be null");
 
-        // 1) вставляем в БД -> получаем id (sequence)
         long newId = repo.insert(incoming, ownerLogin);
 
-        // 2) только если успешно — обновляем память
         lock.lock();
         try {
             incoming.setIdServerSide(newId);
@@ -116,11 +112,9 @@ public class CollectionManager {
     public boolean updateById(long id, MusicBand newBand, String ownerLogin) throws Exception {
         if (newBand == null) throw new NullPointerException("newBand cannot be null");
 
-        // 1) update в БД (owner check внутри WHERE)
         boolean ok = repo.update(id, newBand, ownerLogin);
         if (!ok) return false;
 
-        // 2) update в памяти
         lock.lock();
         try {
             MusicBand bandToUpdate = getById(id);
@@ -140,11 +134,9 @@ public class CollectionManager {
     }
 
     public boolean removeById(long id, String ownerLogin) throws Exception {
-        // 1) delete в БД (owner check)
         boolean ok = repo.delete(id, ownerLogin);
         if (!ok) return false;
 
-        // 2) delete в памяти
         lock.lock();
         try {
             return collection.removeIf(b -> b.getId() != null && b.getId() == id);
@@ -153,12 +145,7 @@ public class CollectionManager {
         }
     }
 
-    // ===== read-only команды работают по памяти =====
-
     public int removeGreater(long id, String ownerLogin) throws Exception {
-        // По ТЗ: модифицировать можно только своё.
-        // Значит удаляем только те, где owner==ownerLogin и id > заданного.
-        // Для простоты: найдём кандидатов в памяти, удалим по одному через repo.delete(...)
         List<Long> toDelete;
         lock.lock();
         try {

@@ -1,4 +1,8 @@
-import db.*;
+import db.AuthRepository;
+import db.DbInit;
+import db.DbManager;
+import db.MusicBandRepository;
+import db.PgPass;
 import managers.AuthManager;
 import managers.CollectionManager;
 import network.RequestHandler;
@@ -14,7 +18,6 @@ public class ServerMain {
     public static void main(String[] args) {
         int port = 2222;
 
-        // как легче: сначала args, потом env, потом дефолты
         String host = (args != null && args.length > 0 && args[0] != null && !args[0].isBlank()) ? args[0].trim() : env("PGHOST");
         String dbName = (args != null && args.length > 1 && args[1] != null && !args[1].isBlank()) ? args[1].trim() : env("PGDATABASE");
         String user = (args != null && args.length > 2 && args[2] != null && !args[2].isBlank()) ? args[2].trim() : env("PGUSER");
@@ -23,8 +26,22 @@ public class ServerMain {
         if (host.isBlank()) host = "pg";
         if (dbName.isBlank()) dbName = "studs";
 
-        if (user.isBlank() || pass.isBlank()) {
-            System.out.println("Не заданы креды БД. Передай args: <host> <db> <user> <pass> или env PGUSER/PGPASSWORD.");
+        if (user.isBlank()) {
+            System.out.println("Не задан логин БД. Передай args: <host> <db> <user> <pass> или env PGUSER.");
+            System.exit(1);
+            return;
+        }
+
+        if (pass.isBlank()) {
+            String pgpass = PgPass.findPassword(host, 5432, dbName, user);
+            if (pgpass != null && !pgpass.isBlank()) {
+                pass = pgpass;
+                System.out.println("Пароль взят из ~/.pgpass");
+            }
+        }
+
+        if (pass.isBlank()) {
+            System.out.println("Не найден пароль БД. Задай env PGPASSWORD или настрой ~/.pgpass.");
             System.exit(1);
             return;
         }

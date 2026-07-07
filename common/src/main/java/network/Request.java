@@ -8,8 +8,8 @@ public class Request implements Serializable {
     private final CommandType type;
     private final String args;
 
-    private final Long id;               // для remove_by_id/update/remove_greater
-    private final Serializable payload;  // MusicBand/Album/MusicGenre
+    private final Long id;
+    private final Serializable payload;
     private final UserCredentials credentials;
 
     public Request(CommandType type, String args, Long id, Serializable payload, UserCredentials credentials) {

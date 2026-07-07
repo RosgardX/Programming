@@ -63,8 +63,8 @@ public class UpdateId implements Command {
 
             String description = askString(scanner, "description (можно пусто): ", true);
 
-            ZonedDateTime establishmentDate = askZonedDateTime(scanner,
-                    "establishmentDate (например 2024-05-01T12:30:00+03:00): ");
+            ZonedDateTime establishmentDate = ZonedDateTime.now();
+            System.out.println("Дата основания проставлена автоматически: " + establishmentDate);
 
             MusicGenre genre = askGenre(scanner, true);
 
@@ -89,7 +89,6 @@ public class UpdateId implements Command {
         }
     }
 
-    // helpers почти такие же как в Add
     private String askString(Scanner scanner, String prompt, boolean canBeEmpty) {
         while (true) {
             System.out.print(prompt);
@@ -140,18 +139,6 @@ public class UpdateId implements Command {
                 return v;
             } catch (NumberFormatException e) {
                 System.out.println("Введите long.");
-            }
-        }
-    }
-
-    private ZonedDateTime askZonedDateTime(Scanner scanner, String prompt) {
-        while (true) {
-            System.out.print(prompt);
-            String s = scanner.nextLine().trim();
-            try {
-                return ZonedDateTime.parse(s);
-            } catch (Exception e) {
-                System.out.println("Неверный формат даты.");
             }
         }
     }

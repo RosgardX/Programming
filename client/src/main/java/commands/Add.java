@@ -51,8 +51,8 @@ public class Add implements Command {
 
             String description = askString(scanner, "Введите описание (можно пустую строку): ", true);
 
-            ZonedDateTime establishmentDate = askZonedDateTime(scanner,
-                    "Введите дату основания (ISO-8601, например 2024-05-01T12:30:00+03:00): ");
+            ZonedDateTime establishmentDate = ZonedDateTime.now();
+            System.out.println("Дата основания проставлена автоматически: " + establishmentDate);
 
             MusicGenre genre = askGenre(scanner, true);
 
@@ -77,7 +77,6 @@ public class Add implements Command {
         }
     }
 
-    // ===== helpers (валидация ввода) =====
 
     private String askString(Scanner scanner, String prompt, boolean canBeEmpty) {
         while (true) {
@@ -129,18 +128,6 @@ public class Add implements Command {
                 return v;
             } catch (NumberFormatException e) {
                 System.out.println("Введите целое число (long).");
-            }
-        }
-    }
-
-    private ZonedDateTime askZonedDateTime(Scanner scanner, String prompt) {
-        while (true) {
-            System.out.print(prompt);
-            String s = scanner.nextLine().trim();
-            try {
-                return ZonedDateTime.parse(s);
-            } catch (Exception e) {
-                System.out.println("Неверный формат даты. Пример: 2024-05-01T12:30:00+03:00");
             }
         }
     }

@@ -19,7 +19,6 @@ public class RequestHandler {
         if (request == null) return new Response(false, "Request is null");
 
         try {
-            // REGISTER/LOGIN доступны без авторизации
             if (request.getType() == CommandType.REGISTER) {
                 boolean ok = authManager.register(request.getCredentials());
                 return new Response(ok, ok ? "Регистрация успешна." : "Регистрация не удалась (логин занят?).");
@@ -30,7 +29,6 @@ public class RequestHandler {
                 return new Response(ok, ok ? "Авторизация успешна." : "Неверный логин/пароль.");
             }
 
-            // остальные команды — только авторизованным
             if (!authManager.authorize(request.getCredentials())) {
                 return new Response(false, "Запрещено: пользователь не авторизован.");
             }
@@ -39,7 +37,6 @@ public class RequestHandler {
 
             return switch (request.getType()) {
 
-                // read-only: только из памяти (по ТЗ)
                 case INFO -> new Response(true, collectionManager.getInfo());
                 case SHOW -> new Response(true, collectionManager.show());
 
@@ -61,7 +58,6 @@ public class RequestHandler {
                 case PRINT_FIELD_DESCENDING_ESTABLISHMENT_DATE ->
                         new Response(true, collectionManager.getEstablishmentDatesText());
 
-                // модификации: только владельцу (по ТЗ)
                 case ADD -> {
                     if (!(request.getPayload() instanceof MusicBand band)) {
                         yield new Response(false, "ADD: payload должен быть MusicBand");
